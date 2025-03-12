@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%highlight{%p} %logger{-2} - %m{FATAL=red blink,ERROR=red,WARN=yellow bold, INFO=green, DEBUG=green bold}%n"
+                    disableAnsi="false"/>
+        </Console>
+
+        <File name="File" filename="logs/app.log" append="true">
+            <PatternLayout
+                    pattern="%highlight{%p} %logger{-2} - %m{FATAL=red blink,ERROR=red,WARN=yellow bold, INFO=green, DEBUG=green bold}%n"
+                    disableAnsi="false"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>
