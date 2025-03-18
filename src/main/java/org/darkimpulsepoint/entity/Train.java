@@ -88,15 +88,24 @@ public class Train {
 
     @Override
     public String toString() {
-        return "Train{" +
-                "id=" + id +
-                ", destination='" + destination + '\'' +
-                ", trainNumber=" + trainNumber +
-                ", departureTime=" + departureTime +
-                ", commonSeats=" + commonSeats +
-                ", coupeSeats=" + coupeSeats +
-                ", reservedSeats=" + reservedSeats +
-                ", luxurySeats=" + luxurySeats +
-                '}';
+      StringBuilder str = new StringBuilder("Train{");
+      str.append("id=");
+      str.append(id);
+      str.append(", destination=");
+      str.append(destination);
+      str.append(", trainNumber=");
+      str.append(trainNumber);
+      str.append(", departureTime=");
+      str.append(departureTime);
+      str.append(", commonSeats=");
+      str.append(commonSeats);
+      str.append(", coupeSeats=");
+      str.append(coupeSeats);
+      str.append(", reservedSeats=");
+      str.append(reservedSeats);
+      str.append(", luxurySeats=");
+      str.append(luxurySeats);
+      str.append("}");
+      return str.toString();
     }
 }
